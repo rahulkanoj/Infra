@@ -1,6 +1,9 @@
 #AUTHOR : Rahulsingh Kanoj
 #created on 31/01/2022
 #Email:rahulkanoj3@gmail.com
+
+
+
 #!/bin/bash
 echo " wait  for a while we are updating your system  "
 set -e #terminates the process where error occurs
