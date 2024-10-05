@@ -1,0 +1,27 @@
+Get-operation
+requests 
+| project name, resultCode, timestamp, url
+| where toint(resultCode) > 0
+| where url has "apim.azure-api.net/api/" and name has "GET" 
+| summarize number_of_requests=count() by resultCode, bin(timestamp, 15m)
+| render areachart
+
+Count_of_Request_Size
+requests
+| project customMeasurements, url, name
+| where url has "apim.azure-api.net/api"
+| summarize Count_of_Request_Size=count()by tostring(customMeasurements["Request Size"])
+|render areachart 
+
+Response_Http_Status
+requests
+| where url has "apim.azure-api.net/api/"
+| project resultCode, timestamp
+| where toint(resultCode) > 0
+| summarize number_of_requests=count() by resultCode, bin(timestamp, 24h)
+| render piechart
+
+Response_time_on_average
+requests
+| where url has "apim.azure-api.net/api/"
+| summarize avg_request_duration=avg(duration) by bin(timestamp, 1h)
