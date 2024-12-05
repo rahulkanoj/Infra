@@ -1,6 +1,6 @@
 # Author:    Rahulsingh Kanoj
 # Created:   27/07/2024
-# This Script is used to stop the Azure services of Emory(SOA) PP Environment.
+# This Script is used to stop the Azure services of PP Environment.
 
 $variablePath = "Variable.txt"
 $values = Get-Content $variablePath | Out-String | ConvertFrom-StringData
