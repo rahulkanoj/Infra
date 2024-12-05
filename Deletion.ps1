@@ -1,5 +1,5 @@
-﻿$Subscription="CZ MED27 - MUC - Curie - PreProd - EU"
-$MyResourceGroup="czm27-cur-pp-euw"
+﻿$Subscription=""
+$MyResourceGroup=""
 $l="West Europe"
 az account set --subscription $Subscription
 az account show --output table
