@@ -1,6 +1,6 @@
  Author:    Rahulsingh Kanoj
 # Created on:   26/07/2024
-# This Script is used to start the Azure services of Emory(SOA) PP Environment.
+# This Script is used to start the Azure services PP Environment.
 
 
 $variablePath = "Variable.txt"
